@@ -7,6 +7,7 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
+  flutter_native_splash: ^2.4.5
   flutter:
     sdk: flutter
 
@@ -20,6 +21,15 @@ flutter:
   assets:
     - assets/images/
     - assets/icon/
+  fonts:
+  - family: poppins
+    fonts:
+      - asset: assets/fonts/poppins/Poppins-Regular.ttf
+  - family: SF
+    fonts:
+      - asset: assets/fonts/sf_pro_display/SFPRODISPLAYREGULAR.OTF
+ 
+  
   uses-material-design: true
 
 flutter_launcher_icons:
