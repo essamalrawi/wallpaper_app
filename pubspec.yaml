@@ -1,0 +1,45 @@
+name: wallpaper_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter_native_splash: ^2.4.5
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_launcher_icons: "^0.14.3"
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/icon/
+  fonts:
+  - family: poppins
+    fonts:
+      - asset: assets/fonts/poppins/Poppins-Regular.ttf
+  - family: SF
+    fonts:
+      - asset: assets/fonts/sf_pro_display/SFPRODISPLAYREGULAR.OTF
+ 
+  
+  uses-material-design: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+flutter_assets:
+  assets_path: assets/images/
+  output_path: lib/core/utils
+  filename: app_images.dart
+  field_prefix: null
