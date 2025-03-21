@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wallpaper_app/core/functions/on_generate_route.dart';
+import 'package:wallpaper_app/features/home_view/presentation/home_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,7 +12,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: HomeView.routeName,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
