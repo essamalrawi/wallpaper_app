@@ -40,12 +40,12 @@ class _HomeViewSliderState extends State<HomeViewSlider> {
             controller: pageController,
 
             children: [
-              Image.asset(Assets.imagesSlideOne),
+              Image.asset(Assets.imagesHomeViewImageSliderSlideOne),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Image.asset(Assets.imagesSlideTwo),
+                child: Image.asset(Assets.imagesHomeViewImageSliderSlideTwo),
               ),
-              Image.asset(Assets.imagesSlideThree),
+              Image.asset(Assets.imagesHomeViewImageSliderSlideThree),
             ],
           ),
         ),

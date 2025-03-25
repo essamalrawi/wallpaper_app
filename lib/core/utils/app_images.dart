@@ -14,9 +14,17 @@ class Assets {
   /// assets/icon/search.svg
   static const String iconSearch = "assets/icon/search.svg";
 
-  /// Assets for imagesAndroid12LogoAndPlus
-  /// assets/images/android12LogoAndPlus.png
-  static const String imagesAndroid12LogoAndPlus = "assets/images/android12LogoAndPlus.png";
+  /// Assets for imagesActiveContentFeedFire
+  /// assets/images/active_content_feed/fire.svg
+  static const String imagesActiveContentFeedFire = "assets/images/active_content_feed/fire.svg";
+
+  /// Assets for imagesActiveContentFeedLeaf
+  /// assets/images/active_content_feed/leaf.svg
+  static const String imagesActiveContentFeedLeaf = "assets/images/active_content_feed/leaf.svg";
+
+  /// Assets for imagesActiveContentFeedTimer
+  /// assets/images/active_content_feed/timer.svg
+  static const String imagesActiveContentFeedTimer = "assets/images/active_content_feed/timer.svg";
 
   /// Assets for imagesCategories1
   /// assets/images/categories/1.png
@@ -34,20 +42,36 @@ class Assets {
   /// assets/images/categories/4.png
   static const String imagesCategories4 = "assets/images/categories/4.png";
 
-  /// Assets for imagesLogo
-  /// assets/images/logo.png
-  static const String imagesLogo = "assets/images/logo.png";
+  /// Assets for imagesHomeViewImageSliderSlideOne
+  /// assets/images/home_view_image_slider/slide_one.png
+  static const String imagesHomeViewImageSliderSlideOne = "assets/images/home_view_image_slider/slide_one.png";
 
-  /// Assets for imagesSlideOne
-  /// assets/images/slide_one.png
-  static const String imagesSlideOne = "assets/images/slide_one.png";
+  /// Assets for imagesHomeViewImageSliderSlideThree
+  /// assets/images/home_view_image_slider/slide_three.png
+  static const String imagesHomeViewImageSliderSlideThree = "assets/images/home_view_image_slider/slide_three.png";
 
-  /// Assets for imagesSlideThree
-  /// assets/images/slide_three.png
-  static const String imagesSlideThree = "assets/images/slide_three.png";
+  /// Assets for imagesHomeViewImageSliderSlideTwo
+  /// assets/images/home_view_image_slider/slide_two.png
+  static const String imagesHomeViewImageSliderSlideTwo = "assets/images/home_view_image_slider/slide_two.png";
 
-  /// Assets for imagesSlideTwo
-  /// assets/images/slide_two.png
-  static const String imagesSlideTwo = "assets/images/slide_two.png";
+  /// Assets for imagesSplashAndroid12LogoAndPlus
+  /// assets/images/splash/android12LogoAndPlus.png
+  static const String imagesSplashAndroid12LogoAndPlus = "assets/images/splash/android12LogoAndPlus.png";
+
+  /// Assets for imagesSplashLogo
+  /// assets/images/splash/logo.png
+  static const String imagesSplashLogo = "assets/images/splash/logo.png";
+
+  /// Assets for imagesUnactiveContentFeedFire
+  /// assets/images/unactive_content_feed/fire.svg
+  static const String imagesUnactiveContentFeedFire = "assets/images/unactive_content_feed/fire.svg";
+
+  /// Assets for imagesUnactiveContentFeedLeaf
+  /// assets/images/unactive_content_feed/leaf.svg
+  static const String imagesUnactiveContentFeedLeaf = "assets/images/unactive_content_feed/leaf.svg";
+
+  /// Assets for imagesUnactiveContentFeedTimer
+  /// assets/images/unactive_content_feed/timer.svg
+  static const String imagesUnactiveContentFeedTimer = "assets/images/unactive_content_feed/timer.svg";
 }
 

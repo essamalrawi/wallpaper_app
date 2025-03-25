@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/core/utils/app_images.dart';
-import 'package:wallpaper_app/core/utils/app_text_styles.dart';
+import 'package:wallpaper_app/features/home_view/presentation/widgets/content_feed.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/custom_app_bar.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/home_view_slider.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/mini_category_container.dart';
@@ -21,6 +20,8 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 9),
 
           MiniCategoryContainer(),
+          SizedBox(height: 18),
+          ContentFeed(),
         ],
       ),
     );
