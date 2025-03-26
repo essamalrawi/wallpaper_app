@@ -2,9 +2,49 @@
 class Assets {
   Assets._();
   
+  /// Assets for iconActiveIconsCategory
+  /// assets/icon/active_icons/category.svg
+  static const String iconActiveIconsCategory = "assets/icon/active_icons/category.svg";
+
+  /// Assets for iconActiveIconsHeart
+  /// assets/icon/active_icons/heart.svg
+  static const String iconActiveIconsHeart = "assets/icon/active_icons/heart.svg";
+
+  /// Assets for iconActiveIconsHome
+  /// assets/icon/active_icons/home.svg
+  static const String iconActiveIconsHome = "assets/icon/active_icons/home.svg";
+
+  /// Assets for iconActiveIconsSetting
+  /// assets/icon/active_icons/setting.svg
+  static const String iconActiveIconsSetting = "assets/icon/active_icons/setting.svg";
+
+  /// Assets for iconFillHeart
+  /// assets/icon/fill_heart.svg
+  static const String iconFillHeart = "assets/icon/fill_heart.svg";
+
+  /// Assets for iconHeart
+  /// assets/icon/heart.svg
+  static const String iconHeart = "assets/icon/heart.svg";
+
   /// Assets for iconIcon
   /// assets/icon/icon.png
   static const String iconIcon = "assets/icon/icon.png";
+
+  /// Assets for iconInActiveIconsCategory
+  /// assets/icon/in_active_icons/category.svg
+  static const String iconInActiveIconsCategory = "assets/icon/in_active_icons/category.svg";
+
+  /// Assets for iconInActiveIconsHeart
+  /// assets/icon/in_active_icons/heart.svg
+  static const String iconInActiveIconsHeart = "assets/icon/in_active_icons/heart.svg";
+
+  /// Assets for iconInActiveIconsHome
+  /// assets/icon/in_active_icons/home.svg
+  static const String iconInActiveIconsHome = "assets/icon/in_active_icons/home.svg";
+
+  /// Assets for iconInActiveIconsSetting
+  /// assets/icon/in_active_icons/setting.svg
+  static const String iconInActiveIconsSetting = "assets/icon/in_active_icons/setting.svg";
 
   /// Assets for iconNotification
   /// assets/icon/notification.svg
@@ -61,6 +101,10 @@ class Assets {
   /// Assets for imagesSplashLogo
   /// assets/images/splash/logo.png
   static const String imagesSplashLogo = "assets/images/splash/logo.png";
+
+  /// Assets for imagesTest
+  /// assets/images/test.png
+  static const String imagesTest = "assets/images/test.png";
 
   /// Assets for imagesUnactiveContentFeedFire
   /// assets/images/unactive_content_feed/fire.svg

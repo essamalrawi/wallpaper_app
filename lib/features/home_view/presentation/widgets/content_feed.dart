@@ -67,7 +67,7 @@ class _ContentFeedState extends State<ContentFeed> {
                       alignment = Alignment.center;
                       opactiy = 0;
                     });
-                    Future.delayed(Duration(milliseconds: 200), () {
+                    Future.delayed(Duration(milliseconds: 300), () {
                       setState(() {
                         selectedIndex = 1;
                         opactiy = 1;
@@ -85,7 +85,7 @@ class _ContentFeedState extends State<ContentFeed> {
                       alignment = Alignment.bottomRight;
                       opactiy = 0;
                     });
-                    Future.delayed(Duration(milliseconds: 200), () {
+                    Future.delayed(Duration(milliseconds: 300), () {
                       setState(() {
                         opactiy = 1;
                         selectedIndex = 2;

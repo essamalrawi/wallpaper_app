@@ -29,6 +29,8 @@ flutter:
     - assets/images/home_view_image_slider/
     - assets/images/splash/
     - assets/images/unactive_content_feed/
+    - assets/icon/active_icons/
+    - assets/icon/in_active_icons/
   fonts:
     - family: poppins
       fonts:
