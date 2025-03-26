@@ -13,7 +13,21 @@ class ContentFeed extends StatefulWidget {
 
 class _ContentFeedState extends State<ContentFeed> {
   int selectedIndex = 0;
-  int oldSelectedIndex = 0;
+  double opactiy = 1;
+  AlignmentGeometry alignment = Alignment.bottomLeft;
+  static List titles = ["Trending", "Recent", "New"];
+
+  static List unactimages = [
+    Assets.imagesUnactiveContentFeedFire,
+    Assets.imagesUnactiveContentFeedTimer,
+    Assets.imagesUnactiveContentFeedLeaf,
+  ];
+  static List actimages = [
+    Assets.imagesActiveContentFeedFire,
+    Assets.imagesActiveContentFeedTimer,
+    Assets.imagesActiveContentFeedLeaf,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,95 +38,90 @@ class _ContentFeedState extends State<ContentFeed> {
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
           children: [
-            SwitchBetweenContentFeed(
-              onTap: () {
-                oldSelectedIndex = selectedIndex;
-                selectedIndex = 0;
-                setState(() {});
-              },
-
-              index: 0,
-              selectedIndex: selectedIndex,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                UnActiveContentFeed(
+                  onTap: () {
+                    setState(() {
+                      alignment = Alignment.bottomLeft;
+                      opactiy = 0;
+                    });
+                    Future.delayed(Duration(milliseconds: 300), () {
+                      setState(() {
+                        selectedIndex = 0;
+                        opactiy = 1;
+                      });
+                    });
+                  },
+                  entity: ContentFeedEntity(
+                    title: titles[0],
+                    image: unactimages[0],
+                  ),
+                ),
+                UnActiveContentFeed(
+                  onTap: () {
+                    setState(() {
+                      alignment = Alignment.center;
+                      opactiy = 0;
+                    });
+                    Future.delayed(Duration(milliseconds: 200), () {
+                      setState(() {
+                        selectedIndex = 1;
+                        opactiy = 1;
+                      });
+                    });
+                  },
+                  entity: ContentFeedEntity(
+                    title: titles[1],
+                    image: unactimages[1],
+                  ),
+                ),
+                UnActiveContentFeed(
+                  onTap: () {
+                    setState(() {
+                      alignment = Alignment.bottomRight;
+                      opactiy = 0;
+                    });
+                    Future.delayed(Duration(milliseconds: 200), () {
+                      setState(() {
+                        opactiy = 1;
+                        selectedIndex = 2;
+                      });
+                    });
+                  },
+                  entity: ContentFeedEntity(
+                    title: titles[2],
+                    image: unactimages[2],
+                  ),
+                ),
+              ],
             ),
-            SwitchBetweenContentFeed(
-              onTap: () {
-                oldSelectedIndex = selectedIndex;
-                selectedIndex = 1;
-                setState(() {});
-              },
 
-              index: 1,
-              selectedIndex: selectedIndex,
-            ),
-            SwitchBetweenContentFeed(
-              onTap: () {
-                oldSelectedIndex = selectedIndex;
-                selectedIndex = 2;
-                setState(() {});
-              },
+            AnimatedAlign(
+              alignment: alignment,
+              duration: Duration(milliseconds: 400),
+              curve: Curves.easeInOut,
 
-              index: 2,
-              selectedIndex: selectedIndex,
+              child: IgnorePointer(
+                ignoring: true,
+                child: AnimatedOpacity(
+                  duration: Duration(milliseconds: 350),
+                  opacity: 1,
+                  child: ActiveContentFeed(
+                    entity: ContentFeedEntity(
+                      title: titles[selectedIndex],
+                      image: actimages[selectedIndex],
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class SwitchBetweenContentFeed extends StatefulWidget {
-  const SwitchBetweenContentFeed({
-    super.key,
-    required this.index,
-    required this.selectedIndex,
-    this.onTap,
-  });
-  final int index;
-  final int selectedIndex;
-  final void Function()? onTap;
-
-  static List titles = ["Trending", "Recent", "New"];
-
-  static List actimages = [
-    Assets.imagesActiveContentFeedFire,
-    Assets.imagesActiveContentFeedTimer,
-    Assets.imagesActiveContentFeedLeaf,
-  ];
-  static List unactimages = [
-    Assets.imagesUnactiveContentFeedFire,
-    Assets.imagesUnactiveContentFeedTimer,
-    Assets.imagesUnactiveContentFeedLeaf,
-  ];
-
-  @override
-  State<SwitchBetweenContentFeed> createState() =>
-      _SwitchBetweenContentFeedState();
-}
-
-class _SwitchBetweenContentFeedState extends State<SwitchBetweenContentFeed> {
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.onTap,
-
-      child:
-          widget.index == widget.selectedIndex
-              ? ActiveContentFeed(
-                entity: ContentFeedEntity(
-                  title: SwitchBetweenContentFeed.titles[widget.index],
-                  image: SwitchBetweenContentFeed.actimages[widget.index],
-                ),
-              )
-              : UnActiveContentFeed(
-                entity: ContentFeedEntity(
-                  title: SwitchBetweenContentFeed.titles[widget.index],
-                  image: SwitchBetweenContentFeed.unactimages[widget.index],
-                ),
-              ),
     );
   }
 }
