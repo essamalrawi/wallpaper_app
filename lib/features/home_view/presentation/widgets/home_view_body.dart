@@ -5,6 +5,7 @@ import 'package:wallpaper_app/features/home_view/presentation/widgets/content_fe
 import 'package:wallpaper_app/features/home_view/presentation/widgets/custom_app_bar.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/home_view_slider.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/mini_category_container.dart';
+import 'package:wallpaper_app/features/home_view/presentation/widgets/wallpaper_feed.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -35,64 +36,6 @@ class HomeViewBody extends StatelessWidget {
           WallpaperFeed(),
         ],
       ),
-    );
-  }
-}
-
-class WallpaperFeed extends StatelessWidget {
-  const WallpaperFeed({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SliverPadding(
-      padding: const EdgeInsets.only(bottom: 16),
-      sliver: SliverGrid(
-        delegate: SliverChildBuilderDelegate((context, index) {
-          return ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: ImageFeed(),
-          );
-        }, childCount: 20),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 14,
-          childAspectRatio: 9 / 16,
-        ),
-      ),
-    );
-  }
-}
-
-class ImageFeed extends StatelessWidget {
-  const ImageFeed({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/images/test.png'),
-
-        Positioned(
-          bottom: 4,
-          left: 4,
-          child: Container(
-            width: 45,
-            height: 45,
-            decoration: ShapeDecoration(
-              color: const Color(0x87191E31),
-              shape: OvalBorder(),
-            ),
-            child: Center(
-              child: SvgPicture.asset(
-                width: 25.07,
-                height: 25.07,
-                Assets.iconHeart,
-              ),
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

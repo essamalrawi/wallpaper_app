@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wallpaper_app/features/home_view/data/Entity/content_feed_entity.dart';
+import 'package:wallpaper_app/features/home_view/data/Entities/content_feed_entity.dart';
 
 class ActiveContentFeed extends StatelessWidget {
   const ActiveContentFeed({super.key, required this.entity});

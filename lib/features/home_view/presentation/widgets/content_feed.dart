@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
-import 'package:wallpaper_app/features/home_view/data/Entity/content_feed_entity.dart';
+import 'package:wallpaper_app/features/home_view/data/Entities/content_feed_entity.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/active_content_feed.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/unactive_content_feed.dart';
 

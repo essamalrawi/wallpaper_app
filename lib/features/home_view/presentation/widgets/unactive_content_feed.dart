@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:wallpaper_app/features/home_view/data/Entity/content_feed_entity.dart';
+import 'package:wallpaper_app/features/home_view/data/Entities/content_feed_entity.dart';
 
 class UnActiveContentFeed extends StatelessWidget {
   const UnActiveContentFeed({super.key, required this.entity, this.onTap});
