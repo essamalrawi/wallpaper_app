@@ -8,15 +8,18 @@ environment:
 
 dependencies:
   animated_toggle_switch: ^0.8.4
+  cached_network_image: ^3.4.1
   dio: ^5.8.0+1
   dots_indicator: ^4.0.1
   either_dart: ^1.0.0
   flutter:
     sdk: flutter
+  flutter_app_loading_indicator: ^0.0.3
   flutter_bloc: ^9.1.0
   flutter_native_splash: ^2.4.5
   flutter_svg: ^2.0.17
   get_it: ^8.0.3
+  lottie: ^3.3.1
 
 dev_dependencies:
   flutter_launcher_icons: "^0.14.3"
@@ -35,6 +38,7 @@ flutter:
     - assets/images/unactive_content_feed/
     - assets/icon/active_icons/
     - assets/icon/in_active_icons/
+    - assets/lottie/
   fonts:
     - family: poppins
       fonts:

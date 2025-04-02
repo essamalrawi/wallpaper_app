@@ -6,19 +6,29 @@ import '../../../../../core/repos/wallpapers_repo.dart';
 
 part 'catch_trending_state.dart';
 
-class CatchTrendingCubit extends Cubit<CatchTrendingState> {
-  CatchTrendingCubit(this.wallpapersRepo) : super(CatchTrendingInitial());
+class FetchWallpapersCubit extends Cubit<FetchWallpapersState> {
+  FetchWallpapersCubit(this.wallpapersRepo) : super(FetchWallpapersInitial());
+  int switcher = 0;
   final WallpapersRepo wallpapersRepo;
   List<WallpaperModel> wallpapers = [];
-  Future<void> fetchTrendingImage() async {
-    emit(CatchTrendingLoading());
-    var result = await wallpapersRepo.fetchWallpapers("Trending");
-    result.fold((e) => emit(CatchTrendingFaluire(errMessage: e.errMessage)), (
-      w,
-    ) {
-      wallpapers = w;
+  Map<int, List<WallpaperModel>> wallpapersByPage = {1: [], 2: [], 3: []};
+  Future<void> fetchWallpapers(int page) async {
+    emit(FetchWallpapersLoading());
+    if (wallpapersByPage[page]!.isEmpty) {
+      var result = await wallpapersRepo.fetchWallpapers(page: page);
+      result.fold(
+        (failure) =>
+            emit(FetchWallpapersFaluire(errMessage: failure.errMessage)),
+        (right) {
+          wallpapersByPage[page] = right;
+          wallpapers = right;
 
-      CatchTrendingSuccess();
-    });
+          emit(FetchWallpapersSuccess());
+        },
+      );
+    } else {
+      wallpapers = wallpapersByPage[page]!;
+      emit(FetchWallpapersSuccess());
+    }
   }
 }

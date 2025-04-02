@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:either_dart/src/either.dart';
+import 'package:wallpaper_app/consonants.dart';
 import 'package:wallpaper_app/core/errors/faluire.dart';
 import 'package:wallpaper_app/core/models/wallpaper_model.dart';
 import 'package:wallpaper_app/core/repos/wallpapers_repo.dart';
@@ -11,12 +12,13 @@ class WallpapersRepoImpl implements WallpapersRepo {
   WallpapersRepoImpl({required this.apiService});
 
   @override
-  Future<Either<Failure, List<WallpaperModel>>> fetchWallpapers(
-    String? topic,
-  ) async {
+  Future<Either<Failure, List<WallpaperModel>>> fetchWallpapers({
+    required int page,
+  }) async {
     try {
       var data = await apiService.get(
-        endPoint: 'search?query=wallpaper $topic',
+        endPoint:
+            'search?query=mobile wallpapers ${KTopic.getRandomWallpaper()} &page=$page',
       );
 
       List<WallpaperModel> wallpapers = [];

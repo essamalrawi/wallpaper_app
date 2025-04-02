@@ -18,6 +18,10 @@ class Assets {
   /// assets/icon/active_icons/setting.svg
   static const String iconActiveIconsSetting = "assets/icon/active_icons/setting.svg";
 
+  /// Assets for iconBackwardButton
+  /// assets/icon/backward_button.svg
+  static const String iconBackwardButton = "assets/icon/backward_button.svg";
+
   /// Assets for iconFillHeart
   /// assets/icon/fill_heart.svg
   static const String iconFillHeart = "assets/icon/fill_heart.svg";
@@ -93,6 +97,10 @@ class Assets {
   /// Assets for imagesHomeViewImageSliderSlideTwo
   /// assets/images/home_view_image_slider/slide_two.png
   static const String imagesHomeViewImageSliderSlideTwo = "assets/images/home_view_image_slider/slide_two.png";
+
+  /// Assets for imagesLoading
+  /// assets/images/loading.gif
+  static const String imagesLoading = "assets/images/loading.gif";
 
   /// Assets for imagesSplashAndroid12LogoAndPlus
   /// assets/images/splash/android12LogoAndPlus.png

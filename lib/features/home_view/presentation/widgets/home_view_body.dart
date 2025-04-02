@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wallpaper_app/core/utils/app_images.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/content_feed.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/custom_app_bar.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/home_view_slider.dart';

@@ -3,7 +3,8 @@ import 'package:wallpaper_app/core/domain/entities/bottom_navigation_bar_entity.
 import 'package:wallpaper_app/core/widgets/navigation_bar_item.dart';
 
 class CustomButtonNavigationBar extends StatefulWidget {
-  const CustomButtonNavigationBar({super.key});
+  const CustomButtonNavigationBar({super.key, required this.onItemTapped});
+  final ValueChanged<int> onItemTapped;
 
   @override
   State<CustomButtonNavigationBar> createState() =>
@@ -44,6 +45,7 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
                   onTap: () {
                     setState(() {
                       selectedIndex = index;
+                      widget.onItemTapped(index);
                     });
                   },
                   child: NavigationBarItem(

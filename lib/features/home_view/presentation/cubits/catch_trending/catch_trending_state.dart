@@ -1,16 +1,16 @@
 part of 'catch_trending_cubit.dart';
 
 @immutable
-sealed class CatchTrendingState {}
+sealed class FetchWallpapersState {}
 
-final class CatchTrendingInitial extends CatchTrendingState {}
+final class FetchWallpapersInitial extends FetchWallpapersState {}
 
-final class CatchTrendingLoading extends CatchTrendingState {}
+final class FetchWallpapersLoading extends FetchWallpapersState {}
 
-final class CatchTrendingSuccess extends CatchTrendingState {}
+final class FetchWallpapersSuccess extends FetchWallpapersState {}
 
-final class CatchTrendingFaluire extends CatchTrendingState {
+final class FetchWallpapersFaluire extends FetchWallpapersState {
   final String errMessage;
 
-  CatchTrendingFaluire({required this.errMessage});
+  FetchWallpapersFaluire({required this.errMessage});
 }
