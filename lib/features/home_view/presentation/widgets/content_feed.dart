@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wallpaper_app/consonants.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
 import 'package:wallpaper_app/features/home_view/data/Entities/content_feed_entity.dart';
 import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';

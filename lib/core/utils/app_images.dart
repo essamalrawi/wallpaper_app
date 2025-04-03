@@ -58,6 +58,42 @@ class Assets {
   /// assets/icon/search.svg
   static const String iconSearch = "assets/icon/search.svg";
 
+  /// Assets for iconSettingsViewIconsArrow
+  /// assets/icon/settings_view_icons/arrow.svg
+  static const String iconSettingsViewIconsArrow = "assets/icon/settings_view_icons/arrow.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsFeedback
+  /// assets/icon/settings_view_icons/settings_feedback.svg
+  static const String iconSettingsViewIconsSettingsFeedback = "assets/icon/settings_view_icons/settings_feedback.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsInvite
+  /// assets/icon/settings_view_icons/settings_invite.svg
+  static const String iconSettingsViewIconsSettingsInvite = "assets/icon/settings_view_icons/settings_invite.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsNotifcations
+  /// assets/icon/settings_view_icons/settings_notifcations.svg
+  static const String iconSettingsViewIconsSettingsNotifcations = "assets/icon/settings_view_icons/settings_notifcations.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsOff
+  /// assets/icon/settings_view_icons/settings_off.svg
+  static const String iconSettingsViewIconsSettingsOff = "assets/icon/settings_view_icons/settings_off.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsPrivacy
+  /// assets/icon/settings_view_icons/settings_privacy.svg
+  static const String iconSettingsViewIconsSettingsPrivacy = "assets/icon/settings_view_icons/settings_privacy.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsStar
+  /// assets/icon/settings_view_icons/settings_star.svg
+  static const String iconSettingsViewIconsSettingsStar = "assets/icon/settings_view_icons/settings_star.svg";
+
+  /// Assets for iconSettingsViewIconsSettingsTerms
+  /// assets/icon/settings_view_icons/settings_terms.svg
+  static const String iconSettingsViewIconsSettingsTerms = "assets/icon/settings_view_icons/settings_terms.svg";
+
+  /// Assets for iconSettingsViewIconsSetttingsOn
+  /// assets/icon/settings_view_icons/setttings_on.svg
+  static const String iconSettingsViewIconsSetttingsOn = "assets/icon/settings_view_icons/setttings_on.svg";
+
   /// Assets for imagesActiveContentFeedFire
   /// assets/images/active_content_feed/fire.svg
   static const String imagesActiveContentFeedFire = "assets/images/active_content_feed/fire.svg";

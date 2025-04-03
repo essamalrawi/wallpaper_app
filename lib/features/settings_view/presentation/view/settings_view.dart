@@ -5,6 +5,6 @@ class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SettingsViewBody());
+    return Scaffold(body: SafeArea(child: SettingsViewBody()));
   }
 }
