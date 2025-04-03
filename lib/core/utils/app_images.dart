@@ -62,6 +62,14 @@ class Assets {
   /// assets/icon/settings_view_icons/arrow.svg
   static const String iconSettingsViewIconsArrow = "assets/icon/settings_view_icons/arrow.svg";
 
+  /// Assets for iconSettingsViewIconsFacebook
+  /// assets/icon/settings_view_icons/facebook.svg
+  static const String iconSettingsViewIconsFacebook = "assets/icon/settings_view_icons/facebook.svg";
+
+  /// Assets for iconSettingsViewIconsInstgram
+  /// assets/icon/settings_view_icons/instgram.svg
+  static const String iconSettingsViewIconsInstgram = "assets/icon/settings_view_icons/instgram.svg";
+
   /// Assets for iconSettingsViewIconsSettingsFeedback
   /// assets/icon/settings_view_icons/settings_feedback.svg
   static const String iconSettingsViewIconsSettingsFeedback = "assets/icon/settings_view_icons/settings_feedback.svg";
@@ -94,6 +102,10 @@ class Assets {
   /// assets/icon/settings_view_icons/setttings_on.svg
   static const String iconSettingsViewIconsSetttingsOn = "assets/icon/settings_view_icons/setttings_on.svg";
 
+  /// Assets for iconSettingsViewIconsTwitter
+  /// assets/icon/settings_view_icons/twitter.svg
+  static const String iconSettingsViewIconsTwitter = "assets/icon/settings_view_icons/twitter.svg";
+
   /// Assets for imagesActiveContentFeedFire
   /// assets/images/active_content_feed/fire.svg
   static const String imagesActiveContentFeedFire = "assets/images/active_content_feed/fire.svg";
@@ -110,6 +122,30 @@ class Assets {
   /// assets/images/categories/1.png
   static const String imagesCategories1 = "assets/images/categories/1.png";
 
+  /// Assets for imagesCategories10
+  /// assets/images/categories/10.png
+  static const String imagesCategories10 = "assets/images/categories/10.png";
+
+  /// Assets for imagesCategories11
+  /// assets/images/categories/11.png
+  static const String imagesCategories11 = "assets/images/categories/11.png";
+
+  /// Assets for imagesCategories12
+  /// assets/images/categories/12.png
+  static const String imagesCategories12 = "assets/images/categories/12.png";
+
+  /// Assets for imagesCategories13
+  /// assets/images/categories/13.png
+  static const String imagesCategories13 = "assets/images/categories/13.png";
+
+  /// Assets for imagesCategories14
+  /// assets/images/categories/14.png
+  static const String imagesCategories14 = "assets/images/categories/14.png";
+
+  /// Assets for imagesCategories15
+  /// assets/images/categories/15.png
+  static const String imagesCategories15 = "assets/images/categories/15.png";
+
   /// Assets for imagesCategories2
   /// assets/images/categories/2.png
   static const String imagesCategories2 = "assets/images/categories/2.png";
@@ -121,6 +157,26 @@ class Assets {
   /// Assets for imagesCategories4
   /// assets/images/categories/4.png
   static const String imagesCategories4 = "assets/images/categories/4.png";
+
+  /// Assets for imagesCategories5
+  /// assets/images/categories/5.png
+  static const String imagesCategories5 = "assets/images/categories/5.png";
+
+  /// Assets for imagesCategories6
+  /// assets/images/categories/6.png
+  static const String imagesCategories6 = "assets/images/categories/6.png";
+
+  /// Assets for imagesCategories7
+  /// assets/images/categories/7.png
+  static const String imagesCategories7 = "assets/images/categories/7.png";
+
+  /// Assets for imagesCategories8
+  /// assets/images/categories/8.png
+  static const String imagesCategories8 = "assets/images/categories/8.png";
+
+  /// Assets for imagesCategories9
+  /// assets/images/categories/9.png
+  static const String imagesCategories9 = "assets/images/categories/9.png";
 
   /// Assets for imagesHomeViewImageSliderSlideOne
   /// assets/images/home_view_image_slider/slide_one.png

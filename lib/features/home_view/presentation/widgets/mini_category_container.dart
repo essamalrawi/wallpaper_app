@@ -8,6 +8,17 @@ class MiniCategoryContainer extends StatelessWidget {
     Assets.imagesCategories2,
     Assets.imagesCategories3,
     Assets.imagesCategories4,
+    Assets.imagesCategories5,
+    Assets.imagesCategories6,
+    Assets.imagesCategories7,
+    Assets.imagesCategories8,
+    Assets.imagesCategories9,
+    Assets.imagesCategories10,
+    Assets.imagesCategories11,
+    Assets.imagesCategories12,
+    Assets.imagesCategories13,
+    Assets.imagesCategories14,
+    Assets.imagesCategories15,
   ];
   @override
   Widget build(BuildContext context) {
