@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/features/category_view/presentation/category_view.dart';
+import 'package:wallpaper_app/features/category_view/presentation/view/category_view.dart';
 import 'package:wallpaper_app/features/favorite_view/presentation/favorite_view.dart';
 import 'package:wallpaper_app/features/home_view/presentation/home_view.dart';
 import 'package:wallpaper_app/features/settings_view/presentation/view/settings_view.dart';

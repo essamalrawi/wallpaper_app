@@ -14,11 +14,11 @@ class WallpapersRepoImpl implements WallpapersRepo {
   @override
   Future<Either<Failure, List<WallpaperModel>>> fetchWallpapers({
     required int page,
+    required String topic,
   }) async {
     try {
       var data = await apiService.get(
-        endPoint:
-            'search?query=mobile wallpapers ${KTopic.getRandomWallpaper()} &page=$page',
+        endPoint: 'search?query=mobile wallpapers $topic &page=$page',
       );
 
       List<WallpaperModel> wallpapers = [];

@@ -12,6 +12,7 @@ class WallpaperFeed extends StatelessWidget {
     return BlocBuilder<FetchWallpapersCubit, FetchWallpapersState>(
       builder: (context, state) {
         final wallpapers = context.watch<FetchWallpapersCubit>().wallpapers;
+
         if (state is FetchWallpapersLoading) {
           return SliverToBoxAdapter(
             child: Lottie.asset("assets/lottie/loading.json"),

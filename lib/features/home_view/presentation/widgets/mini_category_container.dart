@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
+import 'package:wallpaper_app/features/category_view/data/image_category_model.dart';
+import 'package:wallpaper_app/features/category_view/presentation/abstract_view.dart';
+import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
 
 class MiniCategoryContainer extends StatelessWidget {
   const MiniCategoryContainer({super.key});
-  static List images = [
-    Assets.imagesCategories1,
-    Assets.imagesCategories2,
-    Assets.imagesCategories3,
-    Assets.imagesCategories4,
-    Assets.imagesCategories5,
-    Assets.imagesCategories6,
-    Assets.imagesCategories7,
-    Assets.imagesCategories8,
-    Assets.imagesCategories9,
-    Assets.imagesCategories10,
-    Assets.imagesCategories11,
-    Assets.imagesCategories12,
-    Assets.imagesCategories13,
-    Assets.imagesCategories14,
-    Assets.imagesCategories15,
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -57,7 +45,19 @@ class MiniCategoryContainer extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 8.0),
                   child: SizedBox(
                     width: (MediaQuery.sizeOf(context).width - 16) * (0.9 / 4),
-                    child: Image.asset(images[index]),
+                    child: GestureDetector(
+                      onTap: () {
+                        BlocProvider.of<FetchWallpapersCubit>(
+                          context,
+                        ).fetchWallpapersForCategory(
+                          index,
+                          images[index].topic,
+                        );
+                        Navigator.pushNamed(context, AbstractView.routeName);
+                      },
+
+                      child: Image.asset(images[index].imagePath),
+                    ),
                   ),
                 ),
           ),

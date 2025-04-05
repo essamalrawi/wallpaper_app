@@ -3,7 +3,7 @@ import 'package:wallpaper_app/features/home_view/presentation/widgets/content_fe
 import 'package:wallpaper_app/features/home_view/presentation/widgets/custom_app_bar.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/home_view_slider.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/mini_category_container.dart';
-import 'package:wallpaper_app/features/home_view/presentation/widgets/wallpaper_feed.dart';
+import 'package:wallpaper_app/core/widgets/wallpaper_feed.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

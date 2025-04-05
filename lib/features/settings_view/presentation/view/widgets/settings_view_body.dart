@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:wallpaper_app/features/settings_view/presentation/view/custom_settings_nav_bar.dart';
+import 'package:wallpaper_app/core/widgets/custom_nav_bar.dart';
 import 'package:wallpaper_app/features/settings_view/presentation/view/widgets/settings_body_section.dart';
 import 'package:wallpaper_app/features/settings_view/presentation/view/widgets/settings_fotter_section.dart';
 
@@ -17,7 +17,7 @@ class SettingsViewBody extends StatelessWidget {
           children: [
             SizedBox(height: 12),
 
-            CustomSettingsNavBar(),
+            CustomNavBar(title: "Settings"),
             SizedBox(height: 35),
             SettingsBodySection(),
             SizedBox(height: 35),

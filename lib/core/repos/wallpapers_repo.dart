@@ -5,5 +5,6 @@ import 'package:wallpaper_app/core/models/wallpaper_model.dart';
 abstract class WallpapersRepo {
   Future<Either<Failure, List<WallpaperModel>>> fetchWallpapers({
     required int page,
+    required String topic,
   });
 }

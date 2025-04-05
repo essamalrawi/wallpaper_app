@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wallpaper_app/consonants.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
 import 'package:wallpaper_app/features/home_view/data/Entities/content_feed_entity.dart';
 import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
@@ -39,7 +40,7 @@ class _ContentFeedState extends State<ContentFeed> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Stack(
           children: [
             Row(
@@ -60,6 +61,7 @@ class _ContentFeedState extends State<ContentFeed> {
                           context.read<FetchWallpapersCubit>().switcher = 0;
                           context.read<FetchWallpapersCubit>().fetchWallpapers(
                             1,
+                            KTopic.getRandomWallpaper(),
                           );
                         }
                       });
@@ -85,6 +87,7 @@ class _ContentFeedState extends State<ContentFeed> {
                           context.read<FetchWallpapersCubit>().switcher = 1;
                           context.read<FetchWallpapersCubit>().fetchWallpapers(
                             2,
+                            KTopic.getRandomWallpaper(),
                           );
                         }
                       });
@@ -110,6 +113,7 @@ class _ContentFeedState extends State<ContentFeed> {
                           context.read<FetchWallpapersCubit>().switcher = 2;
                           context.read<FetchWallpapersCubit>().fetchWallpapers(
                             3,
+                            KTopic.getRandomWallpaper(),
                           );
                         }
                       });

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wallpaper_app/consonants.dart';
 import 'package:wallpaper_app/features/home_view/main_view_body.dart';
+import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/custom_button_navigation_bar.dart';
 
 class MainView extends StatefulWidget {
@@ -19,6 +22,12 @@ class _MainViewState extends State<MainView> {
       bottomNavigationBar: CustomButtonNavigationBar(
         onItemTapped: (index) {
           currentViewIndex = index;
+          if (index == 0) {
+            context.read<FetchWallpapersCubit>().fetchWallpapers(
+              1,
+              KTopic.getRandomWallpaper(),
+            );
+          }
 
           setState(() {});
         },

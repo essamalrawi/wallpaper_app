@@ -12,10 +12,31 @@ class FetchWallpapersCubit extends Cubit<FetchWallpapersState> {
   final WallpapersRepo wallpapersRepo;
   List<WallpaperModel> wallpapers = [];
   Map<int, List<WallpaperModel>> wallpapersByPage = {1: [], 2: [], 3: []};
-  Future<void> fetchWallpapers(int page) async {
+  Map<int, List<WallpaperModel>> wallpapersByCategory = {
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+    11: [],
+    12: [],
+    13: [],
+    14: [],
+    15: [],
+  };
+
+  Future<void> fetchWallpapers(int page, String topic) async {
     emit(FetchWallpapersLoading());
     if (wallpapersByPage[page]!.isEmpty) {
-      var result = await wallpapersRepo.fetchWallpapers(page: page);
+      var result = await wallpapersRepo.fetchWallpapers(
+        topic: topic,
+        page: page,
+      );
       result.fold(
         (failure) =>
             emit(FetchWallpapersFaluire(errMessage: failure.errMessage)),
@@ -28,6 +49,32 @@ class FetchWallpapersCubit extends Cubit<FetchWallpapersState> {
       );
     } else {
       wallpapers = wallpapersByPage[page]!;
+      emit(FetchWallpapersSuccess());
+    }
+  }
+
+  Future<void> fetchWallpapersForCategory(int page, String topic) async {
+    emit(FetchWallpapersLoading());
+    print(wallpapersByCategory[page]);
+    if (wallpapersByCategory[page]!.isEmpty) {
+      var result = await wallpapersRepo.fetchWallpapers(
+        topic: topic,
+        page: page,
+      );
+      result.fold(
+        (failure) =>
+            emit(FetchWallpapersFaluire(errMessage: failure.errMessage)),
+        (right) {
+          wallpapersByCategory[page] = right;
+          wallpapers = right;
+
+          emit(FetchWallpapersSuccess());
+        },
+      );
+    } else {
+      wallpapers = wallpapersByCategory[page]!;
+
+      // print("Hello");
       emit(FetchWallpapersSuccess());
     }
   }

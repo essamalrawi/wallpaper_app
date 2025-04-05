@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
 
-class CustomSettingsNavBar extends StatelessWidget {
-  const CustomSettingsNavBar({super.key});
-
+class CustomNavBar extends StatelessWidget {
+  const CustomNavBar({super.key, required this.title, this.onPressed});
+  final String title;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: onPressed,
           icon: SvgPicture.asset(
             Assets.iconBackwardButton,
             width: 35,
@@ -19,7 +20,7 @@ class CustomSettingsNavBar extends StatelessWidget {
         ),
         Spacer(),
         Text(
-          "Settings",
+          title,
           style: TextStyle(
             fontFamily: "SF",
             fontSize: 28,
