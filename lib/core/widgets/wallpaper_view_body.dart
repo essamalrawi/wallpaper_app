@@ -1,18 +1,19 @@
+import 'dart:developer';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
 import 'package:wallpaper_app/core/widgets/wallpaper_blur_image.dart';
-import 'package:wallpaper_app/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart';
 
 class WallpaperViewBody extends StatelessWidget {
-  const WallpaperViewBody({super.key, this.image});
-  final String? image;
+  const WallpaperViewBody({super.key, required this.image});
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return WallpaperBlurImage(
+      image: image,
       widget: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
@@ -58,17 +59,20 @@ class ImageWallpaperFeed extends StatelessWidget {
       child: SizedBox(
         width: MediaQuery.sizeOf(context).width * .87,
 
-        child: CachedNetworkImage(
-          imageUrl: context.read<WallpapersCubit>().selectedImage,
-          placeholder:
-              (context, url) => Center(
-                child: Image.asset(
-                  width: 100,
-                  height: 100,
-                  "assets/images/loading.gif",
+        child: Hero(
+          tag: image!,
+          child: CachedNetworkImage(
+            imageUrl: image!,
+            placeholder:
+                (context, url) => Center(
+                  child: Image.asset(
+                    width: 100,
+                    height: 100,
+                    "assets/images/loading.gif",
+                  ),
                 ),
-              ),
-          errorWidget: (context, url, error) => Icon(Icons.error),
+            errorWidget: (context, url, error) => Icon(Icons.error),
+          ),
         ),
       ),
     );

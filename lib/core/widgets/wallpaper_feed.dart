@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -31,22 +33,22 @@ class WallpaperFeed extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: GestureDetector(
                     onTap: () {
-                      final image = wallpapers[index];
-                      final tag = '${image}-$index';
-                      context.read<WallpapersCubit>().selectedImage =
-                          wallpapers[index].image;
-
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => WallpaperView(image: tag),
+                          builder:
+                              (_) =>
+                                  WallpaperView(image: wallpapers[index].image),
                         ),
                       );
                       // Navigator.pushNamed(context, WallpaperView.routeName);
                     },
-                    child: ImageFeed(
-                      showHeartWidget: showHeartWidget,
-                      image: wallpapers[index].image,
+                    child: Hero(
+                      tag: wallpapers[index].image,
+                      child: ImageFeed(
+                        showHeartWidget: showHeartWidget,
+                        image: wallpapers[index].image,
+                      ),
                     ),
                   ),
                 );

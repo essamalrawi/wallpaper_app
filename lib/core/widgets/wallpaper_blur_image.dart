@@ -6,10 +6,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wallpaper_app/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart';
 
 class WallpaperBlurImage extends StatelessWidget {
-  const WallpaperBlurImage({super.key, required this.widget});
+  const WallpaperBlurImage({
+    super.key,
+    required this.widget,
+    required this.image,
+  });
 
   final Widget widget;
-
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -17,7 +21,7 @@ class WallpaperBlurImage extends StatelessWidget {
       children: [
         CachedNetworkImage(
           fit: BoxFit.cover,
-          imageUrl: context.read<WallpapersCubit>().selectedImage,
+          imageUrl: image,
           placeholder:
               (context, url) => Center(
                 child: Image.asset(

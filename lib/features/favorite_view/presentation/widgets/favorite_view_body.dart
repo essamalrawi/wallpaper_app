@@ -39,7 +39,7 @@ class FavoriteViewBody extends StatelessWidget {
               ? WallpaperFeed(
                 showHeartWidget: false,
                 wallpapers: WallpaperModel.fromStrings(
-                  context.read<WallpapersCubit>().wallpapersByFavorite,
+                  context.watch<WallpapersCubit>().wallpapersByFavorite,
                 ),
               )
               : SliverFillRemaining(
