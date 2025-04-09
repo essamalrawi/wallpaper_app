@@ -1,0 +1,52 @@
+Date : 2025-04-06 19:19:40
+Directory : /home/lynx/dev/wallpaper_app/lib
+Total : 11 files,  89 codes, 0 comments, 5 blanks, all 94 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         11 |         89 |          0 |          5 |         94 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                          |         11 |         89 |          0 |          5 |         94 |
+| . (Files)                                                                                                  |          1 |          6 |          0 |          1 |          7 |
+| core                                                                                                       |          1 |          2 |          0 |         -1 |          1 |
+| core/manager                                                                                               |          1 |          2 |          0 |         -1 |          1 |
+| core/manager/navigation                                                                                    |          1 |          2 |          0 |         -1 |          1 |
+| features                                                                                                   |          9 |         81 |          0 |          5 |         86 |
+| features/category_view                                                                                     |          1 |          6 |          0 |          0 |          6 |
+| features/category_view/presentation                                                                        |          1 |          6 |          0 |          0 |          6 |
+| features/category_view/presentation/view                                                                   |          1 |          6 |          0 |          0 |          6 |
+| features/category_view/presentation/view/widgets                                                           |          1 |          6 |          0 |          0 |          6 |
+| features/home_view                                                                                         |          7 |         68 |          0 |          5 |         73 |
+| features/home_view (Files)                                                                                 |          1 |          6 |          0 |         -1 |          5 |
+| features/home_view/presentation                                                                            |          6 |         62 |          0 |          6 |         68 |
+| features/home_view/presentation/widgets                                                                    |          6 |         62 |          0 |          6 |         68 |
+| features/settings_view                                                                                     |          1 |          7 |          0 |          0 |          7 |
+| features/settings_view/presentation                                                                        |          1 |          7 |          0 |          0 |          7 |
+| features/settings_view/presentation/view                                                                   |          1 |          7 |          0 |          0 |          7 |
+| features/settings_view/presentation/view/widgets                                                           |          1 |          7 |          0 |          0 |          7 |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                   | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /home/lynx/dev/wallpaper_app/lib/core/manager/navigation/navigation_cubit.dart                             | Dart     |          2 |          0 |         -1 |          1 |
+| /home/lynx/dev/wallpaper_app/lib/features/category_view/presentation/view/widgets/category_view_body.dart  | Dart     |          6 |          0 |          0 |          6 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/main_view.dart                                         | Dart     |          6 |          0 |         -1 |          5 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/custom_app_bar.dart               | Dart     |          5 |          0 |          2 |          7 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/custom_button_navigation_bar.dart | Dart     |          2 |          0 |         -1 |          1 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/custom_text_field.dart            | Dart     |         -2 |          0 |          0 |         -2 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/home_view_body.dart               | Dart     |          4 |          0 |          0 |          4 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/mini_category_container.dart      | Dart     |         11 |          0 |          1 |         12 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/showSearchOverlay.dart            | Dart     |         42 |          0 |          4 |         46 |
+| /home/lynx/dev/wallpaper_app/lib/features/settings_view/presentation/view/widgets/settings_view_body.dart  | Dart     |          7 |          0 |          0 |          7 |
+| /home/lynx/dev/wallpaper_app/lib/main.dart                                                                 | Dart     |          6 |          0 |          1 |          7 |
+| Total                                                                                                      |          |         89 |          0 |          5 |         94 |
++------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

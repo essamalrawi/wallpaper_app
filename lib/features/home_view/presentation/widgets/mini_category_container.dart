@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wallpaper_app/core/utils/app_images.dart';
+import 'package:wallpaper_app/core/manager/navigation/navigation_cubit.dart';
 import 'package:wallpaper_app/features/category_view/data/image_category_model.dart';
 import 'package:wallpaper_app/features/category_view/presentation/abstract_view.dart';
-import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
+import 'package:wallpaper_app/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart';
 
-class MiniCategoryContainer extends StatelessWidget {
+class MiniCategoryContainer extends StatefulWidget {
   const MiniCategoryContainer({super.key});
 
+  @override
+  State<MiniCategoryContainer> createState() => _MiniCategoryContainerState();
+}
+
+class _MiniCategoryContainerState extends State<MiniCategoryContainer> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,13 +28,20 @@ class MiniCategoryContainer extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Text(
-              'View All',
-              style: TextStyle(
-                color: const Color(0xFF0071E3),
-                fontSize: 18,
-                fontFamily: 'SF',
-                fontWeight: FontWeight.w500,
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  context.read<NavigationCubit>().changeIndex(1);
+                });
+              },
+              child: Text(
+                'View All',
+                style: TextStyle(
+                  color: const Color(0xFF0071E3),
+                  fontSize: 18,
+                  fontFamily: 'SF',
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
           ],
@@ -47,10 +59,10 @@ class MiniCategoryContainer extends StatelessWidget {
                     width: (MediaQuery.sizeOf(context).width - 16) * (0.9 / 4),
                     child: GestureDetector(
                       onTap: () {
-                        BlocProvider.of<FetchWallpapersCubit>(
+                        BlocProvider.of<WallpapersCubit>(
                           context,
                         ).fetchWallpapersForCategory(
-                          index,
+                          index + 1,
                           images[index].topic,
                         );
                         Navigator.pushNamed(context, AbstractView.routeName);

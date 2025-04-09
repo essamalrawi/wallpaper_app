@@ -1,0 +1,51 @@
+Date : 2025-04-08 00:50:06
+Directory : /home/lynx/dev/wallpaper_app/lib
+Total : 12 files,  21 codes, 0 comments, 5 blanks, all 26 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         12 |         21 |          0 |          5 |         26 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |         12 |         21 |          0 |          5 |         26 |
+| . (Files)                                                                                                         |          1 |         -1 |          0 |          0 |         -1 |
+| core                                                                                                              |          4 |         -4 |          0 |         -2 |         -6 |
+| core/manager                                                                                                      |          1 |         -1 |          0 |         -1 |         -2 |
+| core/manager/navigation                                                                                           |          1 |         -1 |          0 |         -1 |         -2 |
+| core/widgets                                                                                                      |          3 |         -3 |          0 |         -1 |         -4 |
+| features                                                                                                          |          7 |         26 |          0 |          7 |         33 |
+| features/favorite_view                                                                                            |          1 |          3 |          0 |          0 |          3 |
+| features/favorite_view/presentation                                                                               |          1 |          3 |          0 |          0 |          3 |
+| features/favorite_view/presentation/widgets                                                                       |          1 |          3 |          0 |          0 |          3 |
+| features/home_view                                                                                                |          6 |         23 |          0 |          7 |         30 |
+| features/home_view/presentation                                                                                   |          6 |         23 |          0 |          7 |         30 |
+| features/home_view/presentation/cubits                                                                            |          4 |         24 |          0 |          7 |         31 |
+| features/home_view/presentation/cubits/catch_trending                                                             |          2 |        -92 |          0 |        -20 |       -112 |
+| features/home_view/presentation/cubits/wallpaper_cubit                                                            |          2 |        116 |          0 |         27 |        143 |
+| features/home_view/presentation/widgets                                                                           |          2 |         -1 |          0 |          0 |         -1 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                          | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /home/lynx/dev/wallpaper_app/lib/consonants.dart                                                                  | Dart     |         -1 |          0 |          0 |         -1 |
+| /home/lynx/dev/wallpaper_app/lib/core/manager/navigation/navigation_cubit.dart                                    | Dart     |         -1 |          0 |         -1 |         -2 |
+| /home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_blur_image.dart                                           | Dart     |          1 |          0 |          0 |          1 |
+| /home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_feed.dart                                                 | Dart     |         -5 |          0 |         -1 |         -6 |
+| /home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_view_body.dart                                            | Dart     |          1 |          0 |          0 |          1 |
+| /home/lynx/dev/wallpaper_app/lib/features/favorite_view/presentation/widgets/favorite_view_body.dart              | Dart     |          3 |          0 |          0 |          3 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart  | Dart     |        -82 |          0 |        -13 |        -95 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/catch_trending/catch_trending_state.dart  | Dart     |        -10 |          0 |         -7 |        -17 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart      | Dart     |        106 |          0 |         20 |        126 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/wallpaper_cubit/wallpapr_cubit_state.dart | Dart     |         10 |          0 |          7 |         17 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/content_feed.dart                        | Dart     |         -3 |          0 |          0 |         -3 |
+| /home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/home_view_body.dart                      | Dart     |          2 |          0 |          0 |          2 |
+| Total                                                                                                             |          |         21 |          0 |          5 |         26 |
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

@@ -6,7 +6,6 @@ class KTopic {
     "Galaxy",
     "Moon",
     "Snowy Landscape",
-    "abstract",
   ];
   static String getRandomWallpaper() {
     final random = Random();

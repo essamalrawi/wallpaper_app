@@ -5,6 +5,6 @@ class FavoriteView extends StatelessWidget {
   const FavoriteView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: FavoriteViewBody());
+    return Scaffold(body: SafeArea(child: FavoriteViewBody()));
   }
 }

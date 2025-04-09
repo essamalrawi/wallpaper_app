@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wallpaper_app/core/domain/entities/bottom_navigation_bar_entity.dart';
+import 'package:wallpaper_app/core/manager/navigation/navigation_cubit.dart';
 import 'package:wallpaper_app/core/widgets/navigation_bar_item.dart';
 
-class CustomButtonNavigationBar extends StatefulWidget {
-  const CustomButtonNavigationBar({super.key, required this.onItemTapped});
-  final ValueChanged<int> onItemTapped;
+class CustomButtonNavigationBar extends StatelessWidget {
+  const CustomButtonNavigationBar({super.key});
 
-  @override
-  State<CustomButtonNavigationBar> createState() =>
-      _CustomButtonNavigationBarState();
-}
-
-class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
-  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,27 +28,34 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
           ),
         ],
       ),
-      child: Row(
-        children:
-            bottomNavigationBarItems.asMap().entries.map((e) {
-              var index = e.key;
-              var entity = e.value;
-              return Expanded(
-                flex: index == selectedIndex ? 3 : 2,
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedIndex = index;
-                      widget.onItemTapped(index);
-                    });
-                  },
-                  child: NavigationBarItem(
-                    isSelected: selectedIndex == index,
-                    entity: entity,
-                  ),
-                ),
-              );
-            }).toList(),
+      child: BlocBuilder<NavigationCubit, NavigationState>(
+        builder: (context, state) {
+          return Row(
+            children:
+                bottomNavigationBarItems.asMap().entries.map((e) {
+                  var index = e.key;
+                  var entity = e.value;
+                  return Expanded(
+                    flex:
+                        index ==
+                                context.read<NavigationCubit>().currentViewIndex
+                            ? 3
+                            : 2,
+                    child: GestureDetector(
+                      onTap: () {
+                        context.read<NavigationCubit>().changeIndex(index);
+                      },
+                      child: NavigationBarItem(
+                        isSelected:
+                            context.read<NavigationCubit>().currentViewIndex ==
+                            index,
+                        entity: entity,
+                      ),
+                    ),
+                  );
+                }).toList(),
+          );
+        },
       ),
     );
   }

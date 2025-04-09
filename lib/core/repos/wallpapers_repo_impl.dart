@@ -1,6 +1,6 @@
+import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:either_dart/src/either.dart';
-import 'package:wallpaper_app/consonants.dart';
 import 'package:wallpaper_app/core/errors/faluire.dart';
 import 'package:wallpaper_app/core/models/wallpaper_model.dart';
 import 'package:wallpaper_app/core/repos/wallpapers_repo.dart';
@@ -17,8 +17,9 @@ class WallpapersRepoImpl implements WallpapersRepo {
     required String topic,
   }) async {
     try {
+      log(topic);
       var data = await apiService.get(
-        endPoint: 'search?query=mobile wallpapers $topic &page=$page',
+        endPoint: 'search?query=$topic &page=$page',
       );
 
       List<WallpaperModel> wallpapers = [];

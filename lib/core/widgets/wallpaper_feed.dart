@@ -1,30 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
-import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
+import 'package:wallpaper_app/core/models/wallpaper_model.dart';
+import 'package:wallpaper_app/core/views/wallpaper_view.dart';
+import 'package:wallpaper_app/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/image_feed.dart';
 
 class WallpaperFeed extends StatelessWidget {
-  const WallpaperFeed({super.key});
-
+  const WallpaperFeed({
+    super.key,
+    required this.wallpapers,
+    required this.showHeartWidget,
+  });
+  final List<WallpaperModel> wallpapers;
+  final bool showHeartWidget;
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FetchWallpapersCubit, FetchWallpapersState>(
+    return BlocBuilder<WallpapersCubit, WallpapersState>(
       builder: (context, state) {
-        final wallpapers = context.watch<FetchWallpapersCubit>().wallpapers;
-
-        if (state is FetchWallpapersLoading) {
+        if (state is WallpapersLoading) {
           return SliverToBoxAdapter(
             child: Lottie.asset("assets/lottie/loading.json"),
           );
-        } else if (state is FetchWallpapersSuccess) {
+        } else if (state is WallpapersSuccess) {
           return SliverPadding(
             padding: const EdgeInsets.only(bottom: 16),
             sliver: SliverGrid(
               delegate: SliverChildBuilderDelegate((context, index) {
                 return ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: ImageFeed(image: wallpapers[index].image.toString()),
+                  child: GestureDetector(
+                    onTap: () {
+                      final image = wallpapers[index];
+                      final tag = '${image}-$index';
+                      context.read<WallpapersCubit>().selectedImage =
+                          wallpapers[index].image;
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => WallpaperView(image: tag),
+                        ),
+                      );
+                      // Navigator.pushNamed(context, WallpaperView.routeName);
+                    },
+                    child: ImageFeed(
+                      showHeartWidget: showHeartWidget,
+                      image: wallpapers[index].image,
+                    ),
+                  ),
                 );
               }, childCount: wallpapers.length),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

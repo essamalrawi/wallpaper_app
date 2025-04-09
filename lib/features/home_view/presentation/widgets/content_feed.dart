@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wallpaper_app/consonants.dart';
 import 'package:wallpaper_app/core/utils/app_images.dart';
 import 'package:wallpaper_app/features/home_view/data/Entities/content_feed_entity.dart';
-import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
+import 'package:wallpaper_app/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/active_content_feed.dart';
 import 'package:wallpaper_app/features/home_view/presentation/widgets/unactive_content_feed.dart';
 
@@ -56,10 +56,9 @@ class _ContentFeedState extends State<ContentFeed> {
                       setState(() {
                         selectedIndex = 0;
                         opactiy = 1;
-                        if (context.read<FetchWallpapersCubit>().switcher !=
-                            0) {
-                          context.read<FetchWallpapersCubit>().switcher = 0;
-                          context.read<FetchWallpapersCubit>().fetchWallpapers(
+                        if (context.read<WallpapersCubit>().switcher != 0) {
+                          context.read<WallpapersCubit>().switcher = 0;
+                          context.read<WallpapersCubit>().fetchWallpapers(
                             1,
                             KTopic.getRandomWallpaper(),
                           );
@@ -82,10 +81,9 @@ class _ContentFeedState extends State<ContentFeed> {
                       setState(() {
                         selectedIndex = 1;
                         opactiy = 1;
-                        if (context.read<FetchWallpapersCubit>().switcher !=
-                            1) {
-                          context.read<FetchWallpapersCubit>().switcher = 1;
-                          context.read<FetchWallpapersCubit>().fetchWallpapers(
+                        if (context.read<WallpapersCubit>().switcher != 1) {
+                          context.read<WallpapersCubit>().switcher = 1;
+                          context.read<WallpapersCubit>().fetchWallpapers(
                             2,
                             KTopic.getRandomWallpaper(),
                           );
@@ -108,10 +106,9 @@ class _ContentFeedState extends State<ContentFeed> {
                       setState(() {
                         opactiy = 1;
                         selectedIndex = 2;
-                        if (context.read<FetchWallpapersCubit>().switcher !=
-                            2) {
-                          context.read<FetchWallpapersCubit>().switcher = 2;
-                          context.read<FetchWallpapersCubit>().fetchWallpapers(
+                        if (context.read<WallpapersCubit>().switcher != 2) {
+                          context.read<WallpapersCubit>().switcher = 2;
+                          context.read<WallpapersCubit>().fetchWallpapers(
                             3,
                             KTopic.getRandomWallpaper(),
                           );

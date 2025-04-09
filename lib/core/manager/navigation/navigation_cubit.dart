@@ -6,18 +6,12 @@ part 'navigation_state.dart';
 class NavigationCubit extends Cubit<NavigationState> {
   NavigationCubit() : super(NavigationInitial());
   int _index = 0;
-  int get index => _index;
-  void changeIndex(int currentIndex) {
-    _index = currentIndex;
 
-    if (currentIndex == 0) {
-      emit(NavigationHome());
-    } else if (currentIndex == 1) {
-      emit(NavigationCategory());
-    } else if (currentIndex == 2) {
-      emit(NavigationFavorite());
-    } else if (currentIndex == 3) {
-      emit(NavigationSettings());
+  int get currentViewIndex => _index;
+  void changeIndex(int currentIndex) {
+    if (currentIndex != _index) {
+      _index = currentIndex;
+      emit(NavigationUpdated());
     }
   }
 }

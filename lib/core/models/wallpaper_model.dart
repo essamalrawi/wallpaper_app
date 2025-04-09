@@ -11,4 +11,7 @@ class WallpaperModel {
         .replaceAll(RegExp(r'w=\d+'), 'w=1080');
     return WallpaperModel(image: updatedUrl);
   }
+  static List<WallpaperModel> fromStrings(List<String> wallpapers) {
+    return wallpapers.map((url) => WallpaperModel(image: url)).toList();
+  }
 }

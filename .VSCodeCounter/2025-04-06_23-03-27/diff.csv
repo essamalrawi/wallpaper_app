@@ -1,0 +1,10 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/home/lynx/dev/wallpaper_app/lib/core/services/shared_preferences_singleton.dart", "Dart", 29, 0, 9, 38
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_feed.dart", "Dart", 7, 0, -1, 6
+"/home/lynx/dev/wallpaper_app/lib/features/category_view/presentation/view/widgets/abstract_body.dart", "Dart", 11, 0, 0, 11
+"/home/lynx/dev/wallpaper_app/lib/features/favorite_view/presentation/widgets/favorite_view_body.dart", "Dart", 33, 0, 0, 33
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart", "Dart", 10, -1, 4, 13
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/image_feed.dart", "Dart", 20, 0, 3, 23
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/showSearchOverlay.dart", "Dart", 12, 0, 2, 14
+"/home/lynx/dev/wallpaper_app/lib/main.dart", "Dart", 3, 0, 0, 3
+"Total", "-", 125, -1, 17, 141

@@ -1,0 +1,14 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/home/lynx/dev/wallpaper_app/lib/consonants.dart", "Dart", -1, 0, 0, -1
+"/home/lynx/dev/wallpaper_app/lib/core/manager/navigation/navigation_cubit.dart", "Dart", -1, 0, -1, -2
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_blur_image.dart", "Dart", 1, 0, 0, 1
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_feed.dart", "Dart", -5, 0, -1, -6
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_view_body.dart", "Dart", 1, 0, 0, 1
+"/home/lynx/dev/wallpaper_app/lib/features/favorite_view/presentation/widgets/favorite_view_body.dart", "Dart", 3, 0, 0, 3
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart", "Dart", -82, 0, -13, -95
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/catch_trending/catch_trending_state.dart", "Dart", -10, 0, -7, -17
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart", "Dart", 106, 0, 20, 126
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/wallpaper_cubit/wallpapr_cubit_state.dart", "Dart", 10, 0, 7, 17
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/content_feed.dart", "Dart", -3, 0, 0, -3
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/home_view_body.dart", "Dart", 2, 0, 0, 2
+"Total", "-", 21, 0, 5, 26

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wallpaper_app/core/manager/navigation/navigation_cubit.dart';
 import 'package:wallpaper_app/core/widgets/custom_nav_bar.dart';
 import 'package:wallpaper_app/features/category_view/data/image_category_model.dart';
 import 'package:wallpaper_app/features/category_view/presentation/abstract_view.dart';
-import 'package:wallpaper_app/features/home_view/presentation/cubits/catch_trending/catch_trending_cubit.dart';
+import 'package:wallpaper_app/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart';
 
 class CategoryViewBody extends StatelessWidget {
   const CategoryViewBody({super.key});
@@ -16,7 +17,12 @@ class CategoryViewBody extends StatelessWidget {
         children: [
           SizedBox(height: 12),
 
-          CustomNavBar(title: "Category"),
+          CustomNavBar(
+            title: "Category",
+            onPressed: () {
+              context.read<NavigationCubit>().changeIndex(0);
+            },
+          ),
           SizedBox(height: 12),
 
           Expanded(
@@ -32,7 +38,7 @@ class CategoryViewBody extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    BlocProvider.of<FetchWallpapersCubit>(
+                    BlocProvider.of<WallpapersCubit>(
                       context,
                     ).fetchWallpapersForCategory(index, images[index].topic);
                     Navigator.pushNamed(context, AbstractView.routeName);
