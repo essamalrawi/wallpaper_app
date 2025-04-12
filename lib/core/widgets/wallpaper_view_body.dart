@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -38,7 +36,10 @@ class WallpaperViewBody extends StatelessWidget {
               ],
             ),
             Spacer(),
-            ImageWallpaperFeed(image: image),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: ImageWallpaperFeed(image: image),
+            ),
             Spacer(flex: 3),
           ],
         ),
@@ -53,28 +54,29 @@ class ImageWallpaperFeed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
+    return LayoutBuilder(
+      builder: (context, constrans) {
+        return SizedBox(
+          width: MediaQuery.sizeOf(context).width,
+          height: MediaQuery.sizeOf(context).height - 35,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
 
-      child: SizedBox(
-        width: MediaQuery.sizeOf(context).width * .87,
-
-        child: Hero(
-          tag: image!,
-          child: CachedNetworkImage(
-            imageUrl: image!,
-            placeholder:
-                (context, url) => Center(
-                  child: Image.asset(
-                    width: 100,
-                    height: 100,
-                    "assets/images/loading.gif",
+            child: CachedNetworkImage(
+              imageUrl: image!,
+              placeholder:
+                  (context, url) => Center(
+                    child: Image.asset(
+                      width: 100,
+                      height: 100,
+                      "assets/images/loading.gif",
+                    ),
                   ),
-                ),
-            errorWidget: (context, url, error) => Icon(Icons.error),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

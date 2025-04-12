@@ -1,0 +1,16 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/home/lynx/dev/wallpaper_app/lib/core/functions/on_generate_route.dart", "Dart", -3, 0, 1, -2
+"/home/lynx/dev/wallpaper_app/lib/core/models/wallpaper_model.dart", "Dart", 3, 0, 0, 3
+"/home/lynx/dev/wallpaper_app/lib/core/repos/wallpapers_repo_impl.dart", "Dart", 1, 0, 0, 1
+"/home/lynx/dev/wallpaper_app/lib/core/services/shared_preferences_singleton.dart", "Dart", -20, 0, -6, -26
+"/home/lynx/dev/wallpaper_app/lib/core/views/wallpaper_view.dart", "Dart", 1, 0, 0, 1
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_blur_image.dart", "Dart", 4, 0, -1, 3
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_feed.dart", "Dart", 8, 1, 0, 9
+"/home/lynx/dev/wallpaper_app/lib/core/widgets/wallpaper_view_body.dart", "Dart", 1, 0, 1, 2
+"/home/lynx/dev/wallpaper_app/lib/features/category_view/presentation/view/widgets/abstract_body.dart", "Dart", 10, 0, 0, 10
+"/home/lynx/dev/wallpaper_app/lib/features/favorite_view/presentation/widgets/favorite_view_body.dart", "Dart", 2, 0, 0, 2
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/main_view.dart", "Dart", 28, 0, 5, 33
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/cubits/wallpaper_cubit/wallpaper_cubit.dart", "Dart", 0, 0, 1, 1
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/home_view_body.dart", "Dart", 3, 0, 0, 3
+"/home/lynx/dev/wallpaper_app/lib/features/home_view/presentation/widgets/image_feed.dart", "Dart", 8, 0, -1, 7
+"Total", "-", 46, 1, 0, 47

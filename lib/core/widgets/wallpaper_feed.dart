@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -43,12 +41,9 @@ class WallpaperFeed extends StatelessWidget {
                       );
                       // Navigator.pushNamed(context, WallpaperView.routeName);
                     },
-                    child: Hero(
-                      tag: wallpapers[index].image,
-                      child: ImageFeed(
-                        showHeartWidget: showHeartWidget,
-                        image: wallpapers[index].image,
-                      ),
+                    child: ImageFeed(
+                      showHeartWidget: showHeartWidget,
+                      image: wallpapers[index].image,
                     ),
                   ),
                 );
